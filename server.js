@@ -1,9 +1,21 @@
+const mongooes = require('mongoose');
 const dotenv = require('dotenv');
-dotenv.config({ path: './config.env' });
 
+dotenv.config({ path: './config.env' });
 const app = require('./app');
 
-// console.log(process.env);
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD,
+);
+// const DB= `mongodb+srv://neelmunjpara:kzoCuwHsuhb4PYLb@cluster0.sjjlmir.mongodb.net/natours`
+mongooes
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+  .then(() => console.log('DB connection successful'));
 
 const port = 3000;
 app.listen(port, () => {
