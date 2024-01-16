@@ -1,8 +1,8 @@
 [
   {
     "_id": "5c8a1d5b0190b214360dc057",
-    "name": "Jonas Schmedtmann",
-    "email": "admin@natours.io",
+    "name": "Neel Munjpara",
+    "email": "neelmunjpara123@gmail.com",
     "role": "admin",
     "active": true,
     "photo": "user-1.jpg",
@@ -10,8 +10,8 @@
   },
   {
     "_id": "5c8a1dfa2f8fb814b56fa181",
-    "name": "Lourdes Browning",
-    "email": "loulou@example.com",
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@example.com",
     "role": "user",
     "active": true,
     "photo": "user-2.jpg",
@@ -19,8 +19,8 @@
   },
   {
     "_id": "5c8a1e1a2f8fb814b56fa182",
-    "name": "Sophie Louise Hart",
-    "email": "sophie@example.com",
+    "name": "Zara Patel",
+    "email": "zara.patel@example.com",
     "role": "user",
     "active": true,
     "photo": "user-3.jpg",
@@ -28,8 +28,8 @@
   },
   {
     "_id": "5c8a1ec62f8fb814b56fa183",
-    "name": "Ayla Cornell",
-    "email": "ayls@example.com",
+    "name": "Vivaan Gupta",
+    "email": "vivaan.gupta@example.com",
     "role": "user",
     "active": true,
     "photo": "user-4.jpg",
@@ -37,8 +37,8 @@
   },
   {
     "_id": "5c8a1f292f8fb814b56fa184",
-    "name": "Leo Gillespie",
-    "email": "leo@example.com",
+    "name": "Anaya Singh",
+    "email": "anaya.singh@example.com",
     "role": "guide",
     "active": true,
     "photo": "user-5.jpg",
@@ -46,8 +46,8 @@
   },
   {
     "_id": "5c8a1f4e2f8fb814b56fa185",
-    "name": "Jennifer Hardy",
-    "email": "jennifer@example.com",
+    "name": "Advait Sharma",
+    "email": "advait.sharma@example.com",
     "role": "guide",
     "active": true,
     "photo": "user-6.jpg",
@@ -55,8 +55,8 @@
   },
   {
     "_id": "5c8a201e2f8fb814b56fa186",
-    "name": "Kate Morrison",
-    "email": "kate@example.com",
+    "name": "Aisha Verma",
+    "email": "aisha.verma@example.com",
     "role": "guide",
     "active": true,
     "photo": "user-7.jpg",
@@ -64,8 +64,8 @@
   },
   {
     "_id": "5c8a20d32f8fb814b56fa187",
-    "name": "Eliana Stout",
-    "email": "eliana@example.com",
+    "name": "Arjun Patel",
+    "email": "anika.kumar@example.com",
     "role": "user",
     "active": true,
     "photo": "user-8.jpg",
