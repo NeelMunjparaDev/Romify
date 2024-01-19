@@ -156,14 +156,14 @@ body {
     linear,
     left top,
     right bottom,
-    from(rgba(125, 213, 111, 0.85)),
-    to(rgba(40, 180, 135, 0.85))
+    from(rgba(98, 89, 102, 0.85)),
+    to(rgba(40, 164, 180, 0.85))
   );
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom right,
     rgba(125, 213, 111, 0.85),
     rgba(40, 180, 135, 0.85)
-  );
+  ); */
 }
 
 .heading-primary {
@@ -231,7 +231,7 @@ body {
 }
 
 .btn--green {
-  background-color: #55c57a;
+  background-color: #508681;
   color: #fff;
 }
 .btn--green::after {
@@ -323,7 +323,7 @@ body {
   }
 }
 .header__logo img {
-  height: 3.5rem;
+  height: 18rem;
 }
 @media only screen and (max-width: 62.5em) {
   .header__logo {
@@ -372,10 +372,10 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
+    from(#06a8ed8e),
     to(#28b487)
   );
-  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background-image: linear-gradient(to right bottom, #33a2f7c0, #3eeef46d);
   opacity: 0.85;
 }
 
@@ -796,7 +796,7 @@ body {
 
 .footer {
   background-color: #f7f7f7;
-  padding: 6rem 4rem 3rem 4rem;
+  padding: 3rem 4rem 3rem 4rem;
   font-size: 1.4rem;
   display: grid;
   grid-template-columns: auto auto;
@@ -805,7 +805,8 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-@media only screen and (max-width: 50em) {
+
+@media only screen and (max-width: 50rem) {
   .footer {
     grid-template-columns: 1fr;
     grid-row-gap: 1.25rem;
@@ -813,23 +814,26 @@ body {
   }
 }
 .footer__logo {
-  grid-row: 1 / 3;
+  grid-row: 1 /3;
   -ms-flex-item-align: center;
   align-self: center;
 }
-@media only screen and (max-width: 50em) {
+
+@media only screen and (max-width: 50rem) {
   .footer__logo {
     grid-row: 1;
   }
 }
 .footer__logo img {
-  height: 3rem;
+  height: 18rem;
 }
+
 .footer__nav {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: flex-end;
 }
 .footer__nav li {
   margin-left: 1.5rem;
@@ -1112,10 +1116,10 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#0f81d8),
+    to(#286eb4)
   );
-  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background-image: linear-gradient(to right bottom, #0f81d8, #286eb4);
   opacity: 0.7;
 }
 .card__picture-img {

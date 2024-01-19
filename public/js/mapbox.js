@@ -1,0 +1,47 @@
+export const displayMap = (locations) => {
+  mapboxgl.accessToken =
+    'pk.eyJ1IjoibWFwLW9mLW5lZWwiLCJhIjoiY2xyaHpsMm1jMDR6ZDJtczEwNnE4Z3ljbyJ9.XyWrjRf9Ai_Gd-TmkTUIGQ';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/map-of-neel/clri03rk000nm01qvfsyxgk1e',
+    scrollZoom: false,
+    //   center: [73.7551395, 15.5515777],
+    //   zoom: 14,
+  });
+
+  const bounds = new mapboxgl.LngLatBounds();
+
+  locations.forEach((loc) => {
+    // Create marker
+    const el = document.createElement('div');
+    el.className = 'marker';
+
+    // add marker
+    new mapboxgl.Marker({
+      element: el,
+      anchor: 'bottom',
+    })
+      .setLngLat(loc.coordinates)
+      .addTo(map);
+
+    // Add popup
+
+    new mapboxgl.Popup({ offset: 30 })
+      .setLngLat(loc.coordinates)
+      .setHTML(`<p>Day ${loc.day}: ${loc.description}<p>`)
+      .addTo(map);
+
+    // extend map bounds to include current location
+    bounds.extend(loc.coordinates);
+  });
+
+  map.fitBounds(bounds, {
+    padding: {
+      top: 200,
+      bottom: 150,
+      left: 100,
+      right: 100,
+    },
+  });
+};
