@@ -1,3 +1,3 @@
-# Natours A Tour guide and Tour planner web App
+# Roamify Tour Booking website
 
 EXCITING TOURS FOR ADVENTUROUS PEOPLE
