@@ -10,11 +10,11 @@ process.on('uncaughtException', (err) => {
 dotenv.config({ path: './config.env' });
 const app = require('./app');
 
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD,
-);
-// const DB= `mongodb+srv://neelmunjpara:kzoCuwHsuhb4PYLb@cluster0.sjjlmir.mongodb.net/natours`
+// const DB = process.env.DATABASE.replace(
+//   '<PASSWORD>',
+//   process.env.DATABASE_PASSWORD,
+// );
+const DB = `mongodb+srv://neelmunjpara:kzoCuwHsuhb4PYLb@cluster0.sjjlmir.mongodb.net/natours`;
 mongooes
   .connect(DB, {
     useNewUrlParser: true,
