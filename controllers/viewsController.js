@@ -2,8 +2,11 @@ const Tour = require('../Models/tourModels');
 const User = require('../Models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
+const { signup } = require('./authController');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
+  req.session.flashMessage =
+    'Welcome to My Project Site!\nThis website serves as a showcase of my Node.js skills. Please note that some functions may not work as intended, as this site is designed for educational purposes. Feel free to explore and learn along with me. Thank you for visiting!';
   // 1) get data from collection
   const tours = await Tour.find();
 
@@ -14,6 +17,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   res.status(200).render('overview', {
     title: 'All Tours',
     tours,
+    flashMessage: req.session.flashMessage,
   });
 });
 
@@ -66,3 +70,10 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
     user: updatedUser,
   });
 });
+
+exports.getsignupForm = (req, res) => {
+  console;
+  res.status(200).render('signup', {
+    title: 'Login into your account',
+  });
+};

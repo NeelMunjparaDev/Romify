@@ -584,7 +584,7 @@ body {
     from(#7dd56f),
     to(#28b487)
   );
-  background: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background: linear-gradient(to right bottom, #6e72db, #b6a3c7);
   clip-path: polygon(
     0 var(--section-rotate),
     100% 0,
@@ -917,6 +917,11 @@ body {
   border: none;
   cursor: pointer;
   font-family: inherit;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  border: 1px solid currentColor !important;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .nav__el:hover,
 .nav__el:active {
@@ -926,6 +931,7 @@ body {
 }
 .nav__el:not(:last-child) {
   margin-right: 3rem;
+  border-radius: 10rem;
 }
 @media only screen and (max-width: 37.5em) {
   .nav__el:not(:last-child) {
@@ -942,10 +948,15 @@ body {
   border: 1px solid currentColor !important;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-size: 1.6rem;
 }
 .nav__el--cta:hover {
-  background-color: #f7f7f7;
-  color: #777;
+  background-color: #e2e9fc;
+  color: #ffffff;
   text-shadow: none;
   border-color: #f7f7f7;
 }
@@ -1325,4 +1336,116 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Adjust other styles for better mobile layout */
+}
+
+.glowing-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #fff; /* Set the text color */
+}
+
+.glowing-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0); /* Set the glow color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.glowing-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.glowing-link {
+  text-decoration: none;
+  color: #fff; /* Set the text color */
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.glowing-link:hover {
+  transform: scale(
+    1.1
+  ); /* Adjust the scale factor for the desired "pop" effect */
+}
+
+/* Add this to your CSS file */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-box {
+  background: #fff; /* Background color of the dialog box */
+  padding: 30px; /* Add padding */
+  border: 2px solid #333; /* Add a border for a square look */
+  text-align: center;
+  border-radius: 10px; /* Adjust border-radius for a subtle corner effect */
+  margin: 0 auto; /* Center the dialog box horizontally */
+  max-width: 400px; /* Set a maximum width for responsiveness */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial box-shadow */
+  animation: flicker 0.5s infinite alternate; /* Add a flickering animation */
+}
+
+.dialog-box p {
+  font-weight: bold; /* Make the text inside <p> bold */
+  font-size: 16px; /* Adjust the font size */
+}
+
+/* Add a smooth transition effect */
+.dialog-box,
+.close-dialog {
+  transition: 0.3s ease-in-out;
+}
+
+/* Style the close button on hover */
+.close-dialog:hover {
+  color: #ff0000; /* Change the color on hover */
+}
+
+/* Add a flickering animation */
+@keyframes flicker {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.login-form,
+.createuser-form,
+.createtour-form,
+.createforgotuserpassword-form {
+  margin: 0 auto;
+  max-width: 55rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  padding: 5rem 7rem;
+  border-radius: 5px;
 }

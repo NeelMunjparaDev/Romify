@@ -2,9 +2,13 @@ footer.footer
     .footer__logo  
         img(src='/img/logo-black.png', alt='Romify logo')
     ul.footer__nav 
-        li: a(href='#') About us 
-        li: a(href='#') Download apps 
-        li: a(href='#') Become aguide
-        li: a(href='#') Careers 
-        li: a(href='#') Contact 
-    p.footer__copyright &copy; by Neel Munjpara
+        li: a.glowing-link(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') About us 
+        li: a.glowing-link(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') Download apps 
+        li: a.glowing-link(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') Become aguide
+        li: a.glowing-link(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') Careers 
+        //- li: a(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') Contact
+          
+        li.footer__copyright
+        | &copy; by
+        a.glowing-link(href='https://www.linkedin.com/in/neel-munjpara-5104721b6/') Neel Munjpara
+    //- a.footer__copyright &copy; by Neel Munjpara

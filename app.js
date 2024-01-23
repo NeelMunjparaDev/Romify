@@ -10,6 +10,7 @@ const cors = require('cors');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const session = require('express-session');
 
 const AppError = require('./utils/appError.js');
 const globalErrorHandler = require('./controllers/errorController.js');
@@ -20,6 +21,15 @@ const bookingRoutes = require('./routes/bookingRoutes.js');
 const viewRouter = require('./routes/viewRoutes.js');
 
 const app = express();
+// Use express-session middleware
+
+app.use(
+  session({
+    secret: process.env.JWT_SECRET, // Replace with a secure secret
+    resave: false,
+    saveUninitialized: true,
+  }),
+);
 
 // CORS
 const corsOptions = {

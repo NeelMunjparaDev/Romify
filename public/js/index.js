@@ -3,6 +3,7 @@ import { displayMap } from './mapbox';
 import { login, logout } from './login';
 import { updatSettings } from './updateSettings';
 import { bookTour } from './stripe';
+import { signup } from './signup';
 
 // DOM ELEMENT
 const mapBox = document.getElementById('map');
@@ -68,4 +69,35 @@ if (bookBtn)
     e.target.textContent = 'Processing...';
     const { tourId } = e.target.dataset;
     bookTour(tourId);
+  });
+
+// const createUserForm = document.querySelector('.form-create');
+
+// and this in the bottom of the file
+// if (createUserForm)
+//   createUserForm.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     document.querySelector('.btn--create--user').textContent = 'Updating...';
+//     const data = {
+//       name: document.getElementById('name').value,
+//       email: document.getElementById('email').value,
+//       password: document.getElementById('password').value,
+//       passwordConfirm: document.getElementById('password-confirm').value,
+//     };
+
+//     await signUp(data);
+//   });
+
+const signupForm = document.querySelector('.form-create');
+if (signupForm)
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    //const form = new FormData(); //used with the form.append format
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const passwordConfirm = document.getElementById('password-confirm').value;
+    signup(name, email, password, passwordConfirm);
   });

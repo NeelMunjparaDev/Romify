@@ -1,0 +1,22 @@
+extends base
+ 
+ 
+block content
+  main.main
+    .createuser-form
+      h2.heading-secondary Create a new user account
+      form.form.form-create
+        .form__group
+          label.form__label(for='name') Full name
+          input#name.form__input(type='name' placeholder='Ola Norman',require,name='name')
+        .form__group
+          label.form__label(for='email') Email address
+          input#email.form__input(type='email' placeholder='olanorman@example.com',require,name='email')
+        .form__group
+          label.form__label(for='password') Password
+          input#password.form__input(type='password' placeholder='••••••••', required, minlength='8')
+        .form__group
+          label.form__label(for='password-confirm') Confirm Password
+          input#password-confirm.form__input(type='password' ,placeholder='••••••••',required, minlength='8')
+        .form__group
+          button.btn.btn--small.btn--green.btn--create--user Create user account
